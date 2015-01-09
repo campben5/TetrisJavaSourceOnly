@@ -84,12 +84,8 @@ public abstract class TetrisPiece {
     //Check for out of bounds on rotation
     private boolean collisionRightHelper(int toCheck) {
         boolean crashFound = true;
-        //System.out.println("toCheck: " + toCheck);
-        //System.out.println("toCheck - Brick.B_WIDTH: " + (toCheck - Brick.B_WIDTH));
-        //System.out.println("toCheck + Brick.B_WIDTH: " + (toCheck + Brick.B_WIDTH));
-        //System.out.println("game.getWidth(): " + (game.getWidth()));
         
-        if((toCheck + Brick.B_WIDTH <= game.getWidth()) && (toCheck >= 0)){
+        if((toCheck + TBrick.B_WIDTH <= game.getWidth()) && (toCheck >= 0)){
             crashFound = false;
         }
         return crashFound;
@@ -169,22 +165,22 @@ public abstract class TetrisPiece {
         //System.out.println("falling "+ l[0][0].getBrickY() + level);
             switch (this.rotationState) {
                 case -1:
-                    if((Brick3.getBrickX() + Brick.B_WIDTH < game.getWidth())) {
+                    if((Brick3.getBrickX() + TBrick.B_WIDTH < game.getWidth())) {
                         allowMove = true;
                     }
                     break;
                 case 0:
-                    if((Brick4.getBrickX() + Brick.B_WIDTH < game.getWidth())) {
+                    if((Brick4.getBrickX() + TBrick.B_WIDTH < game.getWidth())) {
                         allowMove = true;
                     }
                     break;
                 case 1:
-                    if((Brick1.getBrickX() + Brick.B_WIDTH < game.getWidth())) {
+                    if((Brick1.getBrickX() + TBrick.B_WIDTH < game.getWidth())) {
                         allowMove = true;
                     }
                     break;
                 case 2:
-                    if((Brick3.getBrickX() + Brick.B_WIDTH < game.getWidth())) {
+                    if((Brick3.getBrickX() + TBrick.B_WIDTH < game.getWidth())) {
                         allowMove = true;
                     }
                     break;
@@ -212,22 +208,22 @@ public abstract class TetrisPiece {
             //System.out.println("falling "+ l[0][0].getBrickY() + level);
             switch (this.rotationState) {
                 case -1:
-                    if((Brick1.getBrickX() + Brick.B_WIDTH > Brick.B_WIDTH)) {
+                    if((Brick1.getBrickX() + TBrick.B_WIDTH > TBrick.B_WIDTH)) {
                         allowMove = true;
                     }
                     break;
                 case 0:
-                    if((Brick2.getBrickX() + Brick.B_WIDTH > Brick.B_WIDTH)) {
+                    if((Brick2.getBrickX() + TBrick.B_WIDTH > TBrick.B_WIDTH)) {
                         allowMove = true;
                     }
                     break;
                 case 1:
-                    if((Brick3.getBrickX() + Brick.B_WIDTH > Brick.B_WIDTH)) {
+                    if((Brick3.getBrickX() + TBrick.B_WIDTH > TBrick.B_WIDTH)) {
                         allowMove = true;
                     }
                     break;
                 case 2:
-                    if((Brick4.getBrickX() + Brick.B_WIDTH > Brick.B_WIDTH)) {
+                    if((Brick4.getBrickX() + TBrick.B_WIDTH > TBrick.B_WIDTH)) {
                         allowMove = true;
                     }
                     break;
@@ -323,10 +319,10 @@ public abstract class TetrisPiece {
     public void paint(Graphics2D g2d) {
          
         //System.out.println("Paint L");
-        g2d.fillRect(Brick1.getBrickX(), Brick1.getBrickY(), Brick.B_WIDTH, Brick.B_WIDTH);
-        g2d.fillRect(Brick2.getBrickX(), Brick2.getBrickY(), Brick.B_WIDTH, Brick.B_WIDTH);
-        g2d.fillRect(Brick3.getBrickX(), Brick3.getBrickY(), Brick.B_WIDTH, Brick.B_WIDTH);
-        g2d.fillRect(Brick4.getBrickX(), Brick4.getBrickY(), Brick.B_WIDTH, Brick.B_WIDTH);
+        g2d.fillRect(Brick1.getBrickX(), Brick1.getBrickY(), TBrick.B_WIDTH, TBrick.B_WIDTH);
+        g2d.fillRect(Brick2.getBrickX(), Brick2.getBrickY(), TBrick.B_WIDTH, TBrick.B_WIDTH);
+        g2d.fillRect(Brick3.getBrickX(), Brick3.getBrickY(), TBrick.B_WIDTH, TBrick.B_WIDTH);
+        g2d.fillRect(Brick4.getBrickX(), Brick4.getBrickY(), TBrick.B_WIDTH, TBrick.B_WIDTH);
     }
     
     //fall methods

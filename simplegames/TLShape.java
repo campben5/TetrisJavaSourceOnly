@@ -22,13 +22,13 @@ public class TLShape extends TetrisPiece {
         Brick1.setBrickY(Y_START);
 
         Brick2.setBrickX(X_START);
-        Brick2.setBrickY(Y_START + Brick.B_WIDTH);
+        Brick2.setBrickY(Y_START + TBrick.B_WIDTH);
         
         Brick3.setBrickX(X_START);
-        Brick3.setBrickY(Y_START + Brick.B_WIDTH + Brick.B_WIDTH);        
+        Brick3.setBrickY(Y_START + TBrick.B_WIDTH + TBrick.B_WIDTH);        
 
-        Brick4.setBrickX(X_START + Brick.B_WIDTH);
-        Brick4.setBrickY(Y_START + Brick.B_WIDTH + Brick.B_WIDTH);    
+        Brick4.setBrickX(X_START + TBrick.B_WIDTH);
+        Brick4.setBrickY(Y_START + TBrick.B_WIDTH + TBrick.B_WIDTH);    
     }
     
     
@@ -119,11 +119,11 @@ public class TLShape extends TetrisPiece {
         yRotationPoint = Brick3.getBrickY();
         
         //move block 1
-        Brick1.setBrickX(xRotationPoint + Brick.B_WIDTH + Brick.B_WIDTH);
+        Brick1.setBrickX(xRotationPoint + TBrick.B_WIDTH + TBrick.B_WIDTH);
         Brick1.setBrickY(yRotationPoint);
             
         //move block2
-        Brick2.setBrickX(xRotationPoint+ Brick.B_WIDTH);
+        Brick2.setBrickX(xRotationPoint+ TBrick.B_WIDTH);
         Brick2.setBrickY(yRotationPoint);
         
         //move block 3
@@ -132,7 +132,7 @@ public class TLShape extends TetrisPiece {
         
         //move block 4
         Brick4.setBrickX(xRotationPoint);
-        Brick4.setBrickY(yRotationPoint + Brick.B_WIDTH);
+        Brick4.setBrickY(yRotationPoint + TBrick.B_WIDTH);
             
         //Handle Brick 5
         TBrick.brickCloneLocation(Brick4, Brick5);       
@@ -146,18 +146,18 @@ public class TLShape extends TetrisPiece {
         
         //move block 1
         Brick1.setBrickX(xRotationPoint);
-        Brick1.setBrickY(yRotationPoint + Brick.B_WIDTH + Brick.B_WIDTH);
+        Brick1.setBrickY(yRotationPoint + TBrick.B_WIDTH + TBrick.B_WIDTH);
             
         //move block2
         Brick2.setBrickX(xRotationPoint);
-        Brick2.setBrickY(yRotationPoint + Brick.B_WIDTH);
+        Brick2.setBrickY(yRotationPoint + TBrick.B_WIDTH);
         
         //move block 3
         Brick3.setBrickX(xRotationPoint);
         Brick3.setBrickY(yRotationPoint);
         
         //move block 4
-        Brick4.setBrickX(xRotationPoint - Brick.B_WIDTH);
+        Brick4.setBrickX(xRotationPoint - TBrick.B_WIDTH);
         Brick4.setBrickY(yRotationPoint);
             
         //Handle Brick 5
@@ -171,11 +171,11 @@ public class TLShape extends TetrisPiece {
         yRotationPoint = Brick3.getBrickY();
         
         //move block 1
-        Brick1.setBrickX(xRotationPoint- Brick.B_WIDTH - Brick.B_WIDTH);
+        Brick1.setBrickX(xRotationPoint- TBrick.B_WIDTH - TBrick.B_WIDTH);
         Brick1.setBrickY(yRotationPoint);
             
         //move block2
-        Brick2.setBrickX(xRotationPoint- Brick.B_WIDTH);
+        Brick2.setBrickX(xRotationPoint- TBrick.B_WIDTH);
         Brick2.setBrickY(yRotationPoint);
 
         //move block 3
@@ -184,7 +184,7 @@ public class TLShape extends TetrisPiece {
         
         //move block 4
         Brick4.setBrickX(xRotationPoint);
-        Brick4.setBrickY(yRotationPoint - Brick.B_WIDTH); 
+        Brick4.setBrickY(yRotationPoint - TBrick.B_WIDTH); 
             
         //Handle Brick 5
         TBrick.brickCloneLocation(Brick4, Brick5);
@@ -198,18 +198,18 @@ public class TLShape extends TetrisPiece {
         
         //move block 1
         Brick1.setBrickX(xRotationPoint);
-        Brick1.setBrickY(yRotationPoint - Brick.B_WIDTH - Brick.B_WIDTH);
+        Brick1.setBrickY(yRotationPoint - TBrick.B_WIDTH - TBrick.B_WIDTH);
             
         //move block2
         Brick2.setBrickX(xRotationPoint);
-        Brick2.setBrickY(yRotationPoint - Brick.B_WIDTH);
+        Brick2.setBrickY(yRotationPoint - TBrick.B_WIDTH);
 
         //move block 3
         Brick3.setBrickX(xRotationPoint);
         Brick3.setBrickY(yRotationPoint);
         
         //move block 4
-        Brick4.setBrickX(xRotationPoint+ Brick.B_WIDTH);
+        Brick4.setBrickX(xRotationPoint+ TBrick.B_WIDTH);
         Brick4.setBrickY(yRotationPoint); 
             
         //Handle Brick 5

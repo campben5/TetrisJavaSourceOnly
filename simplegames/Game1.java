@@ -5,19 +5,15 @@
  */
 package simplegames;
 
-import java.awt.Color;
+
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.awt.geom.Ellipse2D;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JOptionPane;
-
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import java.lang.Integer;
 
 
 /**
@@ -28,20 +24,11 @@ import java.lang.Integer;
 public class Game1 extends JPanel {
     
     private JFrame frame;
-    private Ball gameBall;
-    protected Racket gameRacket;
-    protected Brick gameBrick;
-    //protected LShape gameL;
     protected TLShape gameL;
     private int usrInput;
     private static int level;
     
     public Game1() {
-        //make the game ball
-        //this.gameBall = new Ball(this);
-        //this.gameRacket = new Racket(this);
-        //this.gameBrick = new Brick(this);
-        //this.gameL = new LShape(this);
         this.usrInput = 0;
         this.level = 1;
         
@@ -76,23 +63,11 @@ public class Game1 extends JPanel {
             
             @Override
             public void keyPressed(KeyEvent e) {
-                //System.out.println("keyPressed="+KeyEvent.getKeyText(e.getKeyCode()));
-                //x = Integer. KeyEvent.getKeyText(e.getKeyCode())
-                //gameRacket.keyPressed(e);
-                gameL.keyPressed(e);
-                
-                //try {
-                //    usrInput = Integer.parseInt(KeyEvent.getKeyText(e.getKeyCode()));
-                //} catch (NumberFormatException exc) {
-                //    System.out.println("input was not a number!");
-                //}
-                
+                gameL.keyPressed(e);            
             }
             
             @Override
             public void keyReleased(KeyEvent e) {
-                //System.out.println("keyReleased="+KeyEvent.getKeyText(e.getKeyCode()));
-                //gameRacket.keyReleased(e);
                 gameL.keyReleased(e);
             }
         };
@@ -108,17 +83,13 @@ public class Game1 extends JPanel {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
     
-    private void gameLoop() {
+    public void gameLoop() {
         while(true) {
             try {
-                //gameBall.moveBall();
-                //gameRacket.move();
-                //gameBrick.moveBrick();
                 gameL.fall();
                 this.repaint();
                 Thread.sleep(10);
                 
-                //gameBall.moveBall(usrInput);
             } catch (InterruptedException e) {
                 System.out.println("error closing program!");
                 return;
@@ -140,21 +111,7 @@ public class Game1 extends JPanel {
         super.paint(g);//if you do not call this, you just get a line!
         Graphics2D g2d = (Graphics2D) g;
         
-        //makes edges of moving ball smoother
-        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
-                              RenderingHints.VALUE_ANTIALIAS_ON);
-        
-        //gameBall.paint(g2d);
-        //gameRacket.paint(g2d);
-        //gameBrick.paint(g2d);
         gameL.paint(g2d);
-        //g2d.setColor(Color.red);
-
-        //g2d.drawOval(0, 50, 30, 30);
-        //g2d.fillRect(50, 0, 30, 30);
-        //g2d.fillRect(50, 50, 30, 30);
-        
-        //g2d.draw(new Ellipse2D.Double(0, 100, 30, 30));
     }
     
 }
